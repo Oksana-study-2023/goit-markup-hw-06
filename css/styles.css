@@ -496,7 +496,9 @@ section.section-team {
 .footer-soc-link {
   width: 100%;
   height: 100%;
+
   border-radius: 50%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -507,6 +509,57 @@ section.section-team {
 
 .footer-soc-link:is(:hover, :focus) {
   background-color: var(--success-messages-color);
+}
+
+.footer-online-field {
+  display: flex;
+  gap: 24px;
+}
+
+.online-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  padding-left: 16px;
+
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  color: rgba(255, 255, 255, 0.6);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: transparent;
+}
+
+.online-button {
+  padding: 8px 24px;
+
+  border-radius: 4px;
+
+  color: var(--important-color);
+  background-color: var(--primary-active-color);
+  border-color: var(--primary-active-color);
+
+  transition: background-color 250ms var(--timing-function),
+    border-color 250ms var(--timing-function);
+}
+
+.button-icon {
+  fill: var(--important-color);
+}
+
+.online-button:is(:hover, :focus) {
+  background-color: var(--pressed-state-color);
+  border-color: var(--pressed-state-color);
+}
+
+.button-wrap {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* =============Portfolio=============== */
@@ -685,6 +738,7 @@ section.section-team {
   justify-content: center;
   align-items: center;
   margin-left: auto;
+  margin-bottom: 24px;
   cursor: pointer;
 
   transition: color 250ms var(--timing-function),
@@ -692,9 +746,137 @@ section.section-team {
     fill 250ms var(--timing-function);
 }
 
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+
+  text-align: center;
+  margin-bottom: 16px;
+
+  color: var(--dark-background-color);
+}
 .modal-button:hover,
 .modal-button:focus {
   color: var(--pressed-state-color);
   background-color: var(--pressed-state-color);
   fill: var(--important-color);
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  outline: transparent;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 38px;
+
+  background-color: transparent;
+  color: var(--dark-background-color);
+}
+
+.modal-input:focus {
+  border: 1px solid var(--primary-active-color);
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--primary-active-color);
+}
+
+.modal-input::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.input-wrap {
+  position: relative;
+  margin-bottom: 8px;
+}
+.modal-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  display: inline-block;
+  margin-bottom: 4px;
+
+  color: var(--border-color);
+}
+
+.modal-comment {
+  width: 100%;
+  height: 135px;
+  outline: transparent;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 16px;
+  resize: none;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  background-color: transparent;
+  color: var(--dark-background-color);
+}
+
+.modal-comment:focus {
+  border: 1px solid var(--primary-active-color);
+}
+
+.modal-comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-field-input {
+  margin-bottom: 16px;
+  text-align: left;
+}
+.checkbox-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  display: flex;
+  margin-bottom: 24px;
+
+  color: #757575;
+}
+
+.checkbox-text::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+
+  border: 1.25px solid var(--dark-background-color);
+  border-radius: 2px;
+}
+
+.checkbox-text span {
+  text-decoration-line: underline;
+  padding-left: 4px;
+  color: var(--primary-active-color);
+}
+
+.checkbox-input:checked + .checkbox-text::before {
+  background-color: var(--pressed-state-color);
+  border: none;
+  background-image: url(../images/click.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-input:focus + .checkbox-text::before {
+  border-color: var(--pressed-state-color);
+}
+
+.modal-form {
+  text-align: center;
 }
