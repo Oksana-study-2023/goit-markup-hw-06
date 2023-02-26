@@ -445,6 +445,10 @@ section.section-team {
   background: var(--dark-background-color);
 }
 
+.footer-content {
+  display: flex;
+}
+
 .footer .footer-logo {
   color: var(--light-background-color);
   font-family: 'Raleway';
@@ -468,9 +472,9 @@ section.section-team {
   color: var(--accent-color);
 }
 
-.footer-list {
-  display: flex;
-  gap: 120px;
+.footer-logo-text {
+  display: block;
+  margin-right: 120px;
 }
 
 .footer-title {
@@ -480,6 +484,11 @@ section.section-team {
 
   color: var(--important-color);
   margin-bottom: 16px;
+}
+
+.footer-social {
+  display: block;
+  margin-right: 80px;
 }
 
 .footer-soc-list {
@@ -511,7 +520,7 @@ section.section-team {
   background-color: var(--success-messages-color);
 }
 
-.footer-online-field {
+.online-form {
   display: flex;
   gap: 24px;
 }
@@ -534,8 +543,13 @@ section.section-team {
 }
 
 .online-button {
-  padding: 8px 24px;
+  width: 165px;
+  height: 40px;
 
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
 
   color: var(--important-color);
@@ -548,6 +562,7 @@ section.section-team {
 
 .button-icon {
   fill: var(--important-color);
+  margin-left: 16px;
 }
 
 .online-button:is(:hover, :focus) {
@@ -555,12 +570,12 @@ section.section-team {
   border-color: var(--pressed-state-color);
 }
 
-.button-wrap {
+/* .button-wrap {
   display: flex;
   gap: 16px;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* =============Portfolio=============== */
 .section-portfolio {
@@ -713,7 +728,7 @@ section.section-team {
 
   width: 408px;
   min-height: 576px;
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
 
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -728,6 +743,10 @@ section.section-team {
 }
 
 .modal-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
   width: 24px;
   height: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -738,7 +757,6 @@ section.section-team {
   justify-content: center;
   align-items: center;
   margin-left: auto;
-  margin-bottom: 24px;
   cursor: pointer;
 
   transition: color 250ms var(--timing-function),
